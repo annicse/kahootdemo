@@ -1,0 +1,31 @@
+@font-face {font-family: "icon";
+  src: url('../fonts/icons/icon.eot?t=1631204989813'); /* IE9*/
+  src: url('../fonts/icons/icon.eot?t=1631204989813#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("../fonts/icons/icon.woff2?t=1631204989813") format("woff2"),
+  url("../fonts/icons/icon.woff?t=1631204989813") format("woff"),
+  url('../fonts/icons/icon.ttf?t=1631204989813') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/icons/icon.svg?t=1631204989813#icon') format('svg'); /* iOS 4.1- */
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icon' !important;
+  font-size: 16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-academy:before { content: "\410"; }
+.icon-globe:before { content: "\411"; }
+.icon-home:before { content: "\412"; }
+.icon-pricing:before { content: "\413"; }
+.icon-school:before { content: "\414"; }
+.icon-work:before { content: "\415"; }
+
+$icon-academy: "\410";
+$icon-globe: "\411";
+$icon-home: "\412";
+$icon-pricing: "\413";
+$icon-school: "\414";
+$icon-work: "\415";
+

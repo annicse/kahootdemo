@@ -1,0 +1,651 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap);
+@charset "UTF-8";
+@font-face {
+  font-family: "icon";
+  src: url("../fonts/icons/icon.eot?t=1631204989813");
+  /* IE9*/
+  src: url("../fonts/icons/icon.eot?t=1631204989813#iefix") format("embedded-opentype"), url("../fonts/icons/icon.woff2?t=1631204989813") format("woff2"), url("../fonts/icons/icon.woff?t=1631204989813") format("woff"), url("../fonts/icons/icon.ttf?t=1631204989813") format("truetype"), url("../fonts/icons/icon.svg?t=1631204989813#icon") format("svg");
+  /* iOS 4.1- */
+}
+[class^=icon-], [class*=" icon-"] {
+  font-family: "icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-academy:before {
+  content: "А";
+}
+
+.icon-globe:before {
+  content: "Б";
+}
+
+.icon-home:before {
+  content: "В";
+}
+
+.icon-pricing:before {
+  content: "Г";
+}
+
+.icon-school:before {
+  content: "Д";
+}
+
+.icon-work:before {
+  content: "Е";
+}
+
+.link--underlined, #mainmenu ul li a span {
+  padding-bottom: 0.1875rem;
+}
+.link--underlined:after, #mainmenu ul li a span:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.125rem;
+  transition: width 0.3s;
+}
+.link--underlined:hover:after, #mainmenu ul li a span:hover:after, .link--underlined.active:after, #mainmenu ul li a span.active:after {
+  width: 100%;
+  -webkit-animation: linegrow 0.4s ease 1;
+          animation: linegrow 0.4s ease 1;
+}
+.link--underlined.active:after, #mainmenu ul li a span.active:after {
+  width: 100% !important;
+  -webkit-animation: linegrow 0.4s ease 1;
+          animation: linegrow 0.4s ease 1;
+}
+.link--underlined:hover .str, #mainmenu ul li a span:hover .str,
+.link--underlined:hover .string,
+#mainmenu ul li a span:hover .string, .link--underlined:focus .str, #mainmenu ul li a span:focus .str,
+.link--underlined:focus .string,
+#mainmenu ul li a span:focus .string {
+  background-size: 0% 100%;
+}
+.link.from-none:after {
+  width: 0;
+}
+.link.from-none:hover:after {
+  width: 100%;
+}
+
+@-webkit-keyframes linegrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes linegrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+}
+body main {
+  display: block;
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 3rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sr-only {
+  left: calc(50% - 80px);
+  position: absolute;
+  transform: translateY(-120%);
+}
+.sr-only:focus {
+  transform: translateY(0%);
+}
+
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  padding: 0.5625rem 1rem 0.3125rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.button--white {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 0.25rem 0 #d4d4d4;
+}
+.button--white:hover {
+  background-color: #d4d4d4;
+}
+.button--blue {
+  background-color: #1368CE;
+  color: #fff;
+  box-shadow: 0 0.25rem 0 #1057ad;
+}
+.button--blue:hover {
+  background-color: #1057ad;
+}
+.button--green {
+  background-color: #26890C;
+  color: #fff;
+  box-shadow: 0 0.25rem 0 #21760a;
+}
+.button--green:hover {
+  background-color: #21760a;
+}
+
+#topbar {
+  background-color: #46178F;
+  max-width: 85.375rem;
+  width: 100%;
+  height: 6rem;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  padding: 0.9375rem 1.25rem 0.9375rem 0.625rem;
+}
+#topbar #menu-container {
+  display: inline-block;
+  float: left;
+  width: calc(100% - 116px);
+}
+@media screen and (max-width: 999px) {
+  #topbar #mainmenu {
+    margin: 0;
+    height: 100%;
+    max-width: 25rem;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    z-index: 9999;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    padding-top: 60px;
+  }
+  #topbar #mainmenu.active {
+    transform: translateX(0);
+  }
+}
+
+#logo {
+  display: block;
+  width: 7.25rem;
+  height: 3.375rem;
+  padding: 0.625rem;
+  float: left;
+}
+#logo img {
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 499px) {
+  #logo {
+    width: 5.625rem;
+    padding: 0.3125rem;
+  }
+  #logo img {
+    margin-top: 0.3125rem;
+  }
+}
+
+#mainmenu {
+  display: inline-block;
+  float: left;
+  margin-top: 0.75rem;
+}
+#mainmenu ul {
+  display: inline-block;
+  margin-left: 1.875rem;
+  overflow: hidden;
+}
+#mainmenu ul li {
+  display: block;
+  overflow: hidden;
+  float: left;
+  margin: 0rem 0.9375rem;
+}
+@media screen and (max-width: 1099px) {
+  #mainmenu ul li {
+    margin: 0rem 0.5rem;
+  }
+}
+#mainmenu ul li a {
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  padding: 0.375rem;
+}
+#mainmenu ul li a .icon {
+  display: inline-block;
+  float: left;
+  font-size: 1rem;
+}
+#mainmenu ul li a span {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  margin-left: 1.0625rem;
+}
+#mainmenu ul li a span:after {
+  background-color: #fff;
+  width: 0;
+}
+#mainmenu ul li a:hover span:after {
+  width: 100%;
+}
+@media screen and (max-width: 999px) {
+  #mainmenu ul li {
+    display: block;
+    float: none;
+  }
+  #mainmenu ul li a {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+  #mainmenu ul li a .icon {
+    min-width: 1.5rem;
+  }
+}
+
+#top-right-nav {
+  display: inline-block;
+  float: right;
+  margin-top: 0.25rem;
+}
+@media screen and (max-width: 999px) {
+  #top-right-nav {
+    margin-right: 1.6875rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  #top-right-nav {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 319px) {
+  #top-right-nav {
+    transform: scale(0.8);
+  }
+}
+#top-right-nav ul li {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1.375rem;
+  float: left;
+}
+@media screen and (max-width: 1099px) {
+  #top-right-nav ul li {
+    margin: 0rem 0.3125rem;
+  }
+}
+#top-right-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+#top-right-nav ul li a:not(.button) {
+  display: block;
+  padding: 0.625rem;
+}
+#top-right-nav ul li.log-in {
+  margin-right: 1.125rem;
+}
+@media screen and (max-width: 1099px) {
+  #top-right-nav ul li.log-in {
+    margin-right: 0rem;
+  }
+}
+#top-right-nav ul li.log-in a:after {
+  background-color: #fff;
+}
+#top-right-nav ul li.language {
+  margin-right: 0;
+}
+#top-right-nav ul li.language a {
+  transition: all 0.2s ease-in-out;
+}
+#top-right-nav ul li.language a:hover {
+  transform: scale(1.15);
+}
+#top-right-nav ul li .icon {
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 499px) {
+  #top-right-nav ul li {
+    margin: 0;
+  }
+  #top-right-nav ul li a {
+    font-size: 0.8125rem;
+  }
+  #top-right-nav ul li a:not(.button) {
+    padding-right: 0.3125rem;
+  }
+  #top-right-nav ul li .button {
+    padding: 0.3125rem 0.5rem 0.1875rem;
+    margin-top: 0.3125rem;
+  }
+}
+
+#menu-toggle {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.625rem;
+  box-sizing: content-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 999999;
+  right: 0;
+  top: 1.125rem;
+  display: none;
+}
+@media screen and (max-width: 999px) {
+  #menu-toggle {
+    display: block;
+  }
+}
+#menu-toggle #hamburger-container {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+}
+#menu-toggle #hamburger-container span {
+  display: block;
+  background: #fff;
+  margin-top: 0.375rem;
+}
+#menu-toggle #hamburger-container #hamburger {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#menu-toggle #hamburger-container #hamburger span {
+  width: 1.5rem;
+  height: 0.125rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 6 0/16rem;
+  transition: all 0.2s ease-out;
+}
+#menu-toggle #hamburger-container #hamburger span:nth-child(1) {
+  transition-delay: 0.5s;
+  margin-top: 0.125rem;
+}
+#menu-toggle #hamburger-container #hamburger span:nth-child(2) {
+  transition-delay: 0.625s;
+}
+#menu-toggle #hamburger-container #hamburger span:nth-child(3) {
+  transition-delay: 0.75s;
+}
+#menu-toggle #hamburger-container #cross {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: rotate(45deg);
+}
+#menu-toggle #hamburger-container #cross span {
+  transition: all 0.2s ease-out;
+}
+#menu-toggle #hamburger-container #cross span:nth-child(1) {
+  height: 2px;
+  width: 0;
+  position: absolute;
+  top: 0.6875rem;
+  left: 0;
+  transition-delay: 0s;
+}
+#menu-toggle #hamburger-container #cross span:nth-child(2) {
+  height: 0;
+  width: 2px;
+  position: absolute;
+  left: 0.6875rem;
+  top: 0;
+  transition-delay: 0.25s;
+}
+#menu-toggle.menu-opened #hamburger-container #hamburger span {
+  width: 0;
+}
+#menu-toggle.menu-opened #hamburger-container #hamburger span:nth-child(1) {
+  transition-delay: 0s;
+}
+#menu-toggle.menu-opened #hamburger-container #hamburger span:nth-child(2) {
+  transition-delay: 0.125s;
+}
+#menu-toggle.menu-opened #hamburger-container #hamburger span:nth-child(3) {
+  transition-delay: 0.25s;
+}
+#menu-toggle.menu-opened #hamburger-container #cross span:nth-child(1) {
+  width: 1.5rem;
+  transition-delay: 0.625s;
+}
+#menu-toggle.menu-opened #hamburger-container #cross span:nth-child(2) {
+  height: 1.5rem;
+  transition-delay: 0.375s;
+}
+#menu-toggle:hover #hamburger-container #hamburger span:nth-child(1) {
+  -webkit-animation: hamburger-hover-line-1 0.3s ease-in-out 0s 1 forwards;
+          animation: hamburger-hover-line-1 0.3s ease-in-out 0s 1 forwards;
+}
+#menu-toggle:hover #hamburger-container #hamburger span:nth-child(3) {
+  -webkit-animation: hamburger-hover-line-3 0.3s ease-in-out 0s 1 forwards;
+          animation: hamburger-hover-line-3 0.3s ease-in-out 0s 1 forwards;
+}
+
+@-webkit-keyframes hamburger-hover-line-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hamburger-hover-line-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes hamburger-hover-line-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes hamburger-hover-line-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#main-hero {
+  display: block;
+  color: #fff;
+  max-width: 85.375rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+#main-hero .main-hero-inner {
+  display: block;
+  overflow: hidden;
+  background-color: #46178F;
+  padding-bottom: 14.875rem;
+  background-image: url(../../images/Kids-doing-challenges.svg);
+  background-repeat: no-repeat;
+  background-size: 43.125rem auto;
+  background-position: right 2.25rem top 3.75rem;
+}
+@media screen and (max-width: 1365px) {
+  #main-hero .main-hero-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #main-hero .main-hero-inner {
+    background-size: 36.875rem auto;
+    background-position: right 1.25rem bottom;
+  }
+}
+@media screen and (max-width: 1080px) {
+  #main-hero .main-hero-inner {
+    background-size: 30.625rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main-hero .main-hero-inner {
+    background-size: 25rem auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  #main-hero .main-hero-inner {
+    background-size: 21.25rem auto;
+  }
+}
+@media screen and (max-width: 374px) {
+  #main-hero .main-hero-inner {
+    background-size: 18.75rem auto;
+  }
+}
+#main-hero .oval {
+  display: block;
+  height: 3.75rem;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 1365px) {
+  #main-hero .oval {
+    margin-left: calc( (-1366px + 100vw) / 2 );
+  }
+}
+#main-hero .oval:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #46178F;
+  z-index: 999;
+  width: 275rem;
+  height: 137.5rem;
+  border-radius: 137.5rem/68.75rem;
+  top: -133.75rem;
+  left: -94.8125rem;
+}
+@media screen and (max-width: 640px) {
+  #main-hero .oval:after {
+    transform: scale(0.5);
+    top: -101.75rem;
+  }
+}
+#main-hero #hero-content {
+  margin-left: 8.4375rem;
+  display: block;
+  max-width: 33.875rem;
+  padding-top: 4.375rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+#main-hero #hero-content .button:nth-of-type(2) {
+  margin-left: 1rem;
+}
+#main-hero #hero-content p:last-of-type {
+  margin-bottom: 2.375rem;
+}
+@media screen and (max-width: 768px) {
+  #main-hero #hero-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #main-hero #hero-content h1 {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+    margin-top: 0;
+  }
+  #main-hero #hero-content p {
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 378px) {
+  #main-hero #hero-content .button:nth-of-type(2) {
+    margin: 1.25rem 0 0 0;
+  }
+}
+
+/*# sourceMappingURL=app.css.map*/

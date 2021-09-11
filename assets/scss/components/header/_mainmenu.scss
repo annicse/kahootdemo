@@ -1,0 +1,70 @@
+#mainmenu {
+	display: inline-block;
+	float: left;
+	margin-top: rem-calc(12);
+
+	ul {
+		display: inline-block;
+		margin-left: rem-calc(30);
+		overflow: hidden;
+
+		li {
+			display: block;
+			overflow: hidden;
+			float: left;
+			margin: rem-calc(0) rem-calc(15);
+
+			@media screen and (max-width: 1099px) {
+				margin: rem-calc(0) rem-calc(8);
+			}
+
+			a {
+				color: $white;
+				display: block;
+				overflow: hidden;
+				padding: rem-calc(6);
+
+				.icon {
+					display: inline-block;
+					float: left;
+					font-size: rem-calc(16);
+				}
+
+				span {
+					display: inline-block;
+					float: left;
+					font-weight: 700;
+					margin-left: rem-calc(17);
+
+					&:after {
+					    background-color: $white;
+						width: 0;
+					}
+
+					@extend .link--underlined;
+				}
+
+				&:hover span:after {
+				    width: 100%;
+				}
+			}
+		}
+
+		@media screen and (max-width: 999px) {
+
+			li {
+				display: block;
+				float: none;
+
+				a {
+					padding-top: rem-calc(10);
+					padding-bottom: rem-calc(10);
+
+					.icon {
+						min-width: rem-calc(24);
+					}
+				}
+			}
+		}
+	}
+}

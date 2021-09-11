@@ -1,0 +1,20 @@
+@function rem-calc($size) {
+	$remSize: $size / 16;
+	@return #{$remSize}rem;
+}
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+$body-font: 'Montserrat', sans-serif;
+
+// Colors
+$violet: #46178F;
+$white: #fff;
+$blue: #1368CE;
+$green: #26890C;
+$black: #000;
+$dark-gray: #333;
+
+// container
+$global-width: rem-calc(1366);
+$gutter: rem-calc(20);

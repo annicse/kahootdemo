@@ -1,0 +1,49 @@
+.link {
+
+	&--underlined {
+		padding-bottom: rem-calc(3);
+		//display: inline-block;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: rem-calc(2);
+			transition: width .3s;
+		}
+
+		&:hover:after, &.active:after {
+			width: 100%;
+			animation: linegrow 0.4s ease 1;
+		}
+
+		&.active:after {
+			width: 100% !important;
+			animation: linegrow 0.4s ease 1;
+		}
+
+		&:hover,
+		&:focus {
+			.str,
+			.string {
+				background-size: 0% 100%;
+			}
+		}
+	}
+
+	&.from-none {
+
+		&:after {
+			width: 0;
+		}
+
+		&:hover:after {
+			width: 100%;
+		}
+	}
+}
+
+@keyframes linegrow {
+	0%  {width: 0;}
+	100%  {width: 100%;}
+}
