@@ -28,7 +28,7 @@
 
 	<?php include_once 'parts/header.php'; ?>
 
-	<main id="content" role="main">
+	<main id="content">
 		<?php include_once 'parts/hero.php'; ?>
 	</main>
 

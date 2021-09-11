@@ -7,7 +7,7 @@
 			<a class="link link--underlined from-none" href="#" title="Log in existing user" aria-label="Log in existing user">Log in</a>
 		</li>
 		<li class="language">
-			<a title=""href="#" title="Select other language" aria-label="Select other language"><i class="icon icon-globe"></i></a>
+			<a href="#" title="Select other language" aria-label="Select other language"><i class="icon icon-globe"></i></a>
 		</li>
 	</ul>
 </nav>

@@ -24,6 +24,10 @@
 				overflow: hidden;
 				padding: rem-calc(6);
 
+				&:focus, &:active {
+					border: rem-calc(1) solid $white;
+				}
+
 				.icon {
 					display: inline-block;
 					float: left;

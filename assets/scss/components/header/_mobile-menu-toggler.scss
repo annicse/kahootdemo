@@ -13,6 +13,15 @@
 	right: 0;
 	top: rem-calc(18);
 	display: none;
+	//outline: #21760a;
+
+	>span {
+		text-indent: rem-calc(-100);
+		height: rem-calc(1);
+		width: rem-calc(1);
+		overflow: hidden;
+		display: block;
+	}
 
 	@media screen and (max-width: 999px) {
 		display: block;

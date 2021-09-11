@@ -264,6 +264,9 @@ a {
   overflow: hidden;
   padding: 0.375rem;
 }
+#mainmenu ul li a:focus, #mainmenu ul li a:active {
+  border: 0.0625rem solid #fff;
+}
 #mainmenu ul li a .icon {
   display: inline-block;
   float: left;
@@ -391,6 +394,13 @@ a {
   right: 0;
   top: 1.125rem;
   display: none;
+}
+#menu-toggle > span {
+  text-indent: -6.25rem;
+  height: 0.0625rem;
+  width: 0.0625rem;
+  overflow: hidden;
+  display: block;
 }
 @media screen and (max-width: 999px) {
   #menu-toggle {
