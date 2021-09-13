@@ -1,10 +1,15 @@
 const menuToggler = document.querySelector('#menu-toggle');
 const mainMenu = document.querySelector('#mainmenu');
+const menuItems = mainMenu.querySelectorAll('li > a');
 
 const Mainmenu = {
     openMenu: () => {
         mainMenu.classList.add('active');
         menuToggler.classList.add('menu-opened');
+
+        for (let i=0; i < menuItems.length; i++) {
+            menuItems[i].removeAttribute('tabindex');
+        }
 
         menuToggler.setAttribute('aria-expanded', 'true');
     },
@@ -12,6 +17,10 @@ const Mainmenu = {
     closeMenu: () => {
         mainMenu.classList.remove('active');
         menuToggler.classList.remove('menu-opened');
+
+        for (let i=0; i < menuItems.length; i++) {
+            menuItems[i].setAttribute('tabindex', '-1');
+        }
 
         menuToggler.setAttribute('aria-expanded', 'false');
     },

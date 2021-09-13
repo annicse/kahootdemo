@@ -44,7 +44,9 @@
 				padding: rem-calc(6);
 
 				&:focus, &:active {
-					border: rem-calc(1) solid $white;
+					span {
+						border-bottom: solid $white rem-calc(1);
+					}
 				}
 
 				.icon {
