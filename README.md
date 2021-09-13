@@ -1,6 +1,7 @@
 # kahootdemo
-Kahoot demo
-Uses <a href="https://laravel-mix.com/">Laravel mix</a> (a weback build) for bundling. 
+Kahoot demo project.<br>
+Uses <a href="https://laravel-mix.com/">Laravel mix</a> (a weback build) for bundling.<br>
+Used dummy URLs for favicons and share image.
 
 # Requirements
 Use some kind of php server like MAMP.

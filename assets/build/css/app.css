@@ -353,7 +353,8 @@ a {
   margin-right: 0;
 }
 #top-right-nav ul li.language a {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s linear;
+  transform-origin: center;
 }
 #top-right-nav ul li.language a:hover {
   transform: scale(1.15);
