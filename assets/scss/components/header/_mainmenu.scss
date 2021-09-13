@@ -3,6 +3,25 @@
 	float: left;
 	margin-top: rem-calc(12);
 
+	@media screen and (max-width: 999px) {
+		margin: 0;
+		height: 100%;
+		max-width: rem-calc(500);
+		width: 100%;
+		top: 0;
+		background-color: rgba($black, .9);
+		position: fixed;
+		z-index: 9999;
+		overflow-x: hidden;
+		right: -100%;
+		transition: right .4s cubic-bezier(0.77, 0, 0.175, 1);
+		padding-top: 60px;
+
+		&.active {
+			right: 0;
+		}
+	}
+
 	ul {
 		display: inline-block;
 		margin-left: rem-calc(30);

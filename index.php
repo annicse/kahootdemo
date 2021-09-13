@@ -15,16 +15,17 @@
 	<meta property="og:description" content="Kahoot test project. Creating a header with banner and a menu.">
 	<meta property="og:image" content="share-image.png">
 
-	<link rel="icon" href="/favicon.ico">
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Dummy favicon URLS	-->
+	<link rel="icon" href="/favicon/url">
+	<link rel="icon" href="/favicon/svg/url" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon/url">
 
 	<link rel="stylesheet" href="./assets/build/css/app.css">
 
 </head>
 
 <body>
-	<a class="sr-only button button--green" title="Skip to content" aria-label="Skip to content link" href="#content" tabindex="0">Skip to content</a>
+	<a class="sr-only button button--green" title="Skip to content link" aria-label="Skip to content link" href="#content" tabindex="0">Skip to content</a>
 
 	<?php include_once 'parts/header.php'; ?>
 

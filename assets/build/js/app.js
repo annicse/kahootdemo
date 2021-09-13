@@ -32,16 +32,13 @@ var Mainmenu = {
     mainMenu.classList.add('active');
     menuToggler.classList.add('menu-opened');
     menuToggler.setAttribute('aria-expanded', 'true');
-    mainMenu.setAttribute('aria-hidden', 'false');
   },
   closeMenu: function closeMenu() {
     mainMenu.classList.remove('active');
     menuToggler.classList.remove('menu-opened');
     menuToggler.setAttribute('aria-expanded', 'false');
-    mainMenu.setAttribute('aria-hidden', 'true');
   },
   init: function init() {
-    if (window.innerWidth <= 999) mainMenu.setAttribute('aria-hidden', 'true');
     menuToggler.addEventListener('click', function (e) {
       e.preventDefault();
 
@@ -65,7 +62,15 @@ var Mainmenu = {
       })) {
         Mainmenu.closeMenu();
       }
-    });
+    }); // close the menu if esc key is pressed
+
+    document.addEventListener('keydown', function (event) {
+      var keyName = event.key;
+
+      if (keyName === 'Escape' && mainMenu.classList.contains('active')) {
+        Mainmenu.closeMenu();
+      }
+    }, false);
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Mainmenu);

@@ -1,4 +1,4 @@
-<a href="#" role="button" id="menu-toggle" aria-label="Toggle main menu" title="Toggle main menu" aria-expanded="false" tabindex="0">
+<a href="#" role="button" id="menu-toggle" aria-label="Toggle main menu" title="Toggle main menu" aria-expanded="false" tabindex="0" aria-haspopup="true" aria-controls="mainmenu">
 	<span>Main menu</span>
 	<div id="hamburger-container" class="button-icon">
 		<div id="hamburger">

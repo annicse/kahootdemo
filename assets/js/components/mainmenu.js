@@ -7,7 +7,6 @@ const Mainmenu = {
         menuToggler.classList.add('menu-opened');
 
         menuToggler.setAttribute('aria-expanded', 'true');
-        mainMenu.setAttribute('aria-hidden', 'false');
     },
 
     closeMenu: () => {
@@ -15,13 +14,9 @@ const Mainmenu = {
         menuToggler.classList.remove('menu-opened');
 
         menuToggler.setAttribute('aria-expanded', 'false');
-        mainMenu.setAttribute('aria-hidden', 'true');
     },
 
     init: () => {
-
-        if ( window.innerWidth <= 999 )
-            mainMenu.setAttribute('aria-hidden', 'true');
 
         menuToggler.addEventListener('click', function (e) {
             e.preventDefault();
@@ -44,7 +39,15 @@ const Mainmenu = {
             if ( !path.some(elem => elem.id === 'menu-container') ) {
                 Mainmenu.closeMenu();
             }
-        })
+        });
+
+        // close the menu if esc key is pressed
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            if (  keyName === 'Escape' && mainMenu.classList.contains('active') ) {
+                Mainmenu.closeMenu();
+            }
+        }, false);
     }
 }
 
