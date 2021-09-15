@@ -234,10 +234,12 @@ a {
     z-index: 9999;
     overflow-x: hidden;
     right: -100%;
-    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    padding-top: 60px;
+    visibility: hidden;
+    padding-top: 3.75rem;
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
   }
   #mainmenu.active {
+    visibility: visible;
     right: 0;
   }
 }

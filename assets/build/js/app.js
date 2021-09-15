@@ -32,21 +32,11 @@ var Mainmenu = {
   openMenu: function openMenu() {
     mainMenu.classList.add('active');
     menuToggler.classList.add('menu-opened');
-
-    for (var i = 0; i < menuItems.length; i++) {
-      menuItems[i].removeAttribute('tabindex');
-    }
-
     menuToggler.setAttribute('aria-expanded', 'true');
   },
   closeMenu: function closeMenu() {
     mainMenu.classList.remove('active');
     menuToggler.classList.remove('menu-opened');
-
-    for (var i = 0; i < menuItems.length; i++) {
-      menuItems[i].setAttribute('tabindex', '-1');
-    }
-
     menuToggler.setAttribute('aria-expanded', 'false');
   },
   init: function init() {
